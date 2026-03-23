@@ -1,0 +1,1102 @@
+/* ================== BASE ================== */
+body {
+  font-family: "Lato", sans-serif;
+  color: #3A2A1A;
+}
+
+h1, h2 {
+  font-family: "Merriweather", serif;
+}
+
+/* PADRÃO GLOBAL */
+h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2rem);
+}
+
+.psicologia h2 {
+  font-size: clamp(1.8rem, 4vw, 4rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; 
+}
+
+.navbar .nav-link {
+  font-weight: 400;
+  color: #3A2A1A;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link.active {
+  font-weight: 700; 
+  color: #A45601; 
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  padding: 15px 0;
+  background: #E9E3D5;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.logo {
+  font-weight: bold;
+  color: #3A2A1A;
+}
+
+.logo-sub {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #A45601;
+}
+
+.nav-link {
+  color: #3A2A1A;
+  font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #A45601;
+}
+
+/* ================== HERO ================== */
+.hero {
+  padding-top: 120px;
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url('../img/fundo-psicologa-banner.png') no-repeat right/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(233, 210, 158, 0.6) -57.60%, rgba(245, 247, 236, 0.6) 42.80%);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  padding-bottom: 50px;
+}
+
+.hero-text h1 {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 12px;
+
+  background: linear-gradient(90deg, #A45601 0%, #3E2100 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  margin-bottom: 25px;
+}
+
+/* BOTÃO */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(164, 86, 1, 0.5); }
+  70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(164, 86, 1, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(164, 86, 1, 0); }
+}
+
+.btn-agendar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  padding: 12px 28px;
+
+  background: linear-gradient(90deg, #A45601 0%, #3E2100 100%);
+  color: #fff;
+
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+
+  box-shadow: 
+    0 6px 10px rgba(0,0,0,0.15),
+    0 2px 3px rgba(0,0,0,0.3);
+
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn-agendar:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 20px rgba(0,0,0,0.2),
+    0 4px 6px rgba(0,0,0,0.25);
+  color: #fff !important;
+  animation: none;
+}
+
+/* IMAGEM HERO */
+.hero-img {
+  max-width: 70%;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.8));
+}
+
+.hero-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+
+  background: linear-gradient(to top, #fff, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ================== SOBRE ================== */
+.sobre {
+  padding: 80px 20px;
+  background-color: #E9E3D5;
+}
+
+.box-sobre {
+  margin-top: 140px;
+}
+
+.box-img {
+  position: relative;
+  max-width: 320px;
+  height: 350px;
+  margin: 0 auto;
+
+  background: linear-gradient(180deg, #B96A16 0%, #7A3E00 100%);
+  border-radius: 30px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+.img-sobre {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  max-width: 120%;
+}
+
+.sobre-sub {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.sobre h2 {
+  margin: 10px 0 20px;
+}
+
+.sobre h2 span {
+  font-weight: bold;
+  background: linear-gradient(90deg, #A45601 0%, #3E2100 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sobre p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* ================== PARA QUEM ================== */
+.para-quem {
+  position: relative;
+  padding: 80px 0;
+
+  background: url('../img/fundo-psicologa-dir.png') no-repeat right/cover;
+}
+
+/* overlay igual hero */
+.para-quem .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(233, 210, 158, 0.4) -57.47%, rgba(245, 247, 236, 0.4) 42.53%);
+  z-index: 1;
+}
+
+.para-quem .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TÍTULO */
+.titulo-gradiente {
+  font-weight: bold;
+  margin-bottom: 12px;
+
+  background: linear-gradient(90deg, #A45601 0%, #3E2100 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SUBTÍTULO */
+.subtitulo {
+  font-family: "Merriweather", serif;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tags span {
+  display: inline-block;
+  padding: 10px 18px;
+
+  background: #A45601;
+  color: #fff;
+
+  border-radius: 50px;
+  font-size: 0.9rem;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+/* ================== COMO FUNCIONA ================== */
+.como-funciona {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-color: #E9E3D5;
+  
+}
+
+/* BOX DA IMAGEM */
+.box-funciona {
+  position: relative;
+  max-width: 420px;
+  height: 420px;
+  margin: 0 auto;
+}
+
+/* FUNDO COM IMAGEM + GRADIENTE */
+.bg-funciona {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+
+  background: 
+    linear-gradient(
+      180deg,
+      rgba(185,106,22,0.85),
+      rgba(122,62,0,0.85)
+    ),
+    url('../img/psicologa-andressa-acompanhamento2.jpeg') no-repeat top/cover;
+
+  z-index: 1;
+}
+
+/* IMAGEM PRINCIPAL */
+.img-funciona {
+  position: absolute;
+  bottom: -90px; 
+  left: 75%;
+  transform: translateX(-50%);
+
+  max-width: 100%;
+  z-index: 2;
+}
+
+/* TEXTO */
+.funciona-text {
+  padding-left: 20px;
+}
+
+.funciona-text p {
+  margin-bottom: 12px;
+}
+
+/* ================== PSICOLOGIA ================== */
+.psicologia {
+  position: relative;
+  padding: 80px 0;
+
+  background: url('../img/fundo-psicologa.png') no-repeat right top 30%/cover;
+}
+
+/* overlay alinhado com hero */
+.psicologia .overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(233, 210, 158, 0.5) 0%,
+    rgba(245, 247, 236, 0.9) 70%
+  );
+
+  z-index: 1;
+}
+
+.psicologia .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* alinhamento vertical mais elegante */
+.psicologia .row {
+  align-items: center;
+}
+
+/* espaçamento melhor no texto */
+.psicologia p {
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+/* ================== ATENDIMENTOS ================== */
+.atendimentos {
+  padding: 80px 0;
+  background-color: #E9E3D5;
+}
+
+/* CARD */
+.card-atendimento {
+  max-width: 300px; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  overflow: hidden;
+  background: #A45601;
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+
+.cards-atendimento {
+  margin-top: 25px !important;
+}
+
+/* IMAGEM */
+.card-atendimento img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CONTEÚDO */
+.card-content {
+  padding: 25px 20px;
+  color: #fff;
+}
+
+/* TÍTULO */
+.card-content h3 {
+  font-family: "Merriweather", serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card-content p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.card-content .btn-agendar {
+  margin-top: auto;
+}
+
+/* ================== DIFERENCIAIS ================== */
+.diferenciais {
+  position: relative; 
+  padding: 80px 0;
+
+  background: url('../img/fundo-psicologa-dir.png') no-repeat right/cover;
+}
+
+.diferenciais .overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(233, 210, 158, 0.6),
+    rgba(245, 247, 236, 0.6)
+  );
+
+  z-index: 1;
+}
+
+.diferenciais .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXTO */
+.diferenciais-text p {
+  margin-bottom: 12px;
+}
+
+/* BOX */
+.box-diferenciais {
+  position: relative;
+  max-width: 380px;
+  height: 420px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+/* QUADRADO COM GRADIENTE */
+.bg-diferenciais {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 30px;
+
+  background: linear-gradient(180deg, #B96A16 0%, #7A3E00 100%);
+  z-index: 1;
+}
+
+/* IMAGEM */
+.img-diferenciais {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  max-width: 110%;
+  z-index: 2;
+
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* ================== DEPOIMENTOS ================== */
+.depoimentos {
+  padding: 80px 0;
+  background-color: #E9E3D5;
+}
+
+/* IMAGENS */
+.img-depoimento {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+
+  box-shadow: 
+    0 10px 20px rgba(0,0,0,0.15),
+    0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* SETAS */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+.arrow {
+  font-size: 30px;
+  color: #A45601;
+  font-weight: bold;
+}
+
+/* CENTRALIZA */
+.carousel-inner {
+  padding: 20px 0;
+}
+
+/* ================== CONTEÚDOS ================== */
+.conteudos {
+  position: relative;
+  padding: 80px 0;
+  background: url('../img/fundo-psicologa-dir.png') no-repeat right/cover;
+}
+
+.conteudos .container {
+  position: relative;
+  z-index: 2;
+}
+
+.conteudos .overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(233, 210, 158, 0.6),
+    rgba(245, 247, 236, 0.6)
+  );
+
+  z-index: 1;
+}
+
+/* CARD */
+.card-conteudo {
+  max-width: 300px; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #A45601;
+
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* IMAGEM */
+.card-conteudo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CONTEÚDO */
+.card-conteudo .card-content {
+  padding: 25px 20px;
+  color: #fff;
+}
+
+/* TÍTULO */
+.card-conteudo h3 {
+  font-family: "Merriweather", serif;
+  color: #E9D29E;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card-conteudo p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #E9E3D5;
+  margin-bottom: 15px;
+}
+
+/* BOTÃO LINK */
+.btn-link {
+  position: relative;
+
+  color: #E9E3D5;
+  font-size: 0.85rem;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding-bottom: 4px;
+
+  transition: color 0.3s ease;
+}
+
+/* LINHA BASE (mais grossa) */
+.btn-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2.5px;
+  background: #E9E3D5;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER - efeito elegante */
+.btn-link:hover {
+  color: #fff;
+}
+
+.btn-link:hover::after {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+
+  transform: scaleX(1.1);
+}
+
+/* REMOVE azul feio ao clicar */
+.btn-link:focus,
+.btn-link:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ================== CONTATO ================== */
+.contato {
+  padding: 80px 0;
+  background-color: #E9E3D5;
+}
+
+/* MAPA */
+.mapa-box {
+  width: 80%;
+  height: 300px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ENDEREÇO */
+.endereco-titulo {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.endereco-texto {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* INFO */
+.contato-info h3 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #3A2A1A;
+}
+
+/* ITENS (ícone + texto) */
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.contato-item a {
+  text-decoration: none;
+  color: #3A2A1A;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contato-item a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  left: 0;
+  bottom: -2px;
+  background-color: #A45601;
+  transition: width 0.3s ease;
+}
+
+.contato-item a:hover {
+  color: #A45601;
+}
+
+.contato-item a:hover::after {
+  width: 100%;
+}
+
+/* LINHA DIVISÓRIA */
+.divisor {
+  width: 100%;
+  height: 1px;
+  background: #A45601;
+  opacity: 0.3;
+  margin: 20px 0;
+}
+
+/* ================== CTA FINAL ================== */
+.cta-final {
+  background: #A45601;
+  padding: 40px 0;
+}
+
+.cta-text {
+  font-family: "Merriweather", serif;
+  color: #E9E3D5;
+  font-weight: bold;
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+
+/* ================== FOOTER ================== */
+.footer {
+  background: #E9E3D5;
+  padding: 30px 0;
+}
+
+/* TEXTOS */
+.footer-nome {
+  font-family: "Merriweather", serif;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.footer-sub {
+  font-size: 0.9rem;
+  color: #A45601;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+
+.footer-dev {
+  font-size: 0.8rem;
+}
+
+/* ÍCONES */
+.footer-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-icon:hover {
+  transform: translateY(-2px);
+}
+
+/* ================== RESPONSIVO ================== */
+@media (max-width: 1199px) {
+  .img-funciona {
+    bottom: -110px; 
+  }
+}
+
+@media (max-width: 991px) {
+
+  .hero-img {
+    max-width: 110%;
+  }
+
+  .box-sobre {
+    margin-top: 80px;
+  }
+
+  .box-img {
+    height: 300px;
+  }
+
+  .img-sobre {
+    bottom: -16px;
+  }
+
+  .atendimentos .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .card-atendimento {
+    max-width: 320px;
+  }
+
+  .box-funciona {
+    max-width: 300px;  
+    height: 300px;
+    margin-bottom: 80px;
+  }
+
+  .img-funciona {
+    bottom: -20px;
+    max-width: 100%;
+    bottom: -95px;
+  }
+
+  .funciona-text {
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 70px;
+  }
+
+  .como-funciona {
+    padding-top: 72px;
+    padding-bottom: 0;
+  }
+
+  .diferenciais-text {
+    margin-bottom: 40px;
+  }
+
+  .box-diferenciais {
+    max-width: 300px;
+    height: 320px;
+    bottom: -12px;
+  }
+
+  .img-diferenciais {
+    max-width: 95%;
+    bottom: -12px;
+  }
+
+  .diferenciais .btn-agendar {
+    margin-top: 20px;
+  }
+
+  .cta-final .container {
+    flex-direction: column;
+  }
+
+  .cta-text {
+    max-width: 400px;
+  }
+
+  .cta-final .btn-agendar {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  
+  .hero{
+    padding-top: 80px;
+    margin-bottom: -0px;
+  }
+
+  .hero-img {
+     max-width: 60%;
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+
+  }
+
+  .hero-bottom-fade {
+    display: none;
+  }
+
+  .hero-text {
+    top: -80px;
+    padding-bottom: 0px;
+    padding-inline: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+ .hero-overlay {
+  position: absolute;
+  inset: 0;
+  
+  background: linear-gradient(
+    to bottom,
+    rgba(233, 210, 158, 0.6) 0%,
+    rgba(233, 227, 213, 0.9) 60%,
+    rgba(233, 227, 213, 1) 100%
+  );
+
+  z-index: 1;
+}
+
+  .sobre {
+    padding-top: 120px;
+  }
+
+  .sobre-text {
+    padding-top: 25px;
+    text-align: center;
+  }
+
+  .img-sobre {
+    bottom: -20px;
+  }
+
+  .para-quem {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .titulo-gradiente {
+    text-align: center;
+  }
+
+  .subtitulo {
+    text-align: center;
+  }
+
+  .tags {
+    justify-content: center;
+  }
+
+  .para-quem .btn-agendar {
+    display: flex;
+    width: fit-content;
+    margin: 20px auto 0;
+    margin-bottom: 35px;
+  }
+
+  .psicologia {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .psicologia p {
+    max-width: 100%;
+  }
+
+  .psicologia .btn-agendar {
+    display: flex;
+    width: fit-content;
+    margin: 20px auto 0;
+  }
+
+  .br-desktop {
+    display: none;
+  }
+
+    .atendimentos {
+    padding: 60px 20px;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-atendimento img {
+    height: 180px;
+  }
+
+  .card-content .btn-agendar {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .atendimentos .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card-atendimento {
+    max-width: 280px;
+  }
+
+  .img-diferenciais {
+    bottom: -12px;
+  }
+
+  .diferenciais-text{
+    padding-inline: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .img-depoimento {
+    max-width: 75%;
+
+  }
+
+  .depoimentos .row {
+    --bs-gutter-x: 5px; 
+    --bs-gutter-y: 8px; 
+  }
+
+    .contato {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .contato-info {
+    margin-top: 30px;
+  }
+
+  .contato-item {
+    justify-content: center;
+  }
+
+  .mapa-box {
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .cta-final {
+    text-align: center;
+  }
+
+  .cta-text {
+    margin-bottom: 15px;
+    padding-inline: 20px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+    width: 100%;
+  }
+  
+}
+
+  @media (max-width: 575px) { 
+  .sobre, .para-quem, .psicologia, 
+  .atendimentos, .diferenciais, 
+  .depoimentos, .conteudos, .contato{
+      padding-block: 40px;
+  }
+
+  .como-funciona {
+    padding-top: 40px;
+  }
+
+    .img-sobre {
+    bottom: -16px;
+    max-width: 100%;
+  }
+
+  .hero-text {
+    padding-inline: 20px;
+  }
+
+  .box-funciona {
+    max-width: 260px;
+    height: 260px;
+  }
+
+  .funciona-text {
+      padding-bottom: 50px;
+  }
+
+  .img-funciona {
+    left: 60%;
+    bottom: -92px;
+  }
+
+  .mapa-box {
+  width: 80%;
+  }
+}
