@@ -4,6 +4,10 @@ body {
   color: #3A2A1A;
 }
 
+section {
+  overflow: hidden;
+}
+
 h1, h2 {
   font-family: "Merriweather", serif;
 }
@@ -1098,5 +1102,19 @@ section {
 
   .mapa-box {
   width: 80%;
+  }
+
+  .depoimentos .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+ 
+  .depoimentos .carousel-item .col-6:nth-child(2) {
+    display: none;
+  }
+
+  .img-depoimento {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
